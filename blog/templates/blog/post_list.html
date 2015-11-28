@@ -1,8 +1,21 @@
 <html>
-    <head>
-        <title>Pancake blog</title>
-    </head>
+    <<div>
+    <h1><a href="/">Pancake blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>publié: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+       
+   
     <body>
+	{% for post in posts %}
+	    {{post}}
+	{% endfor %}
 	    <h1><a href="">Les pancake c'est genial !</a></h1>
 		<h2>Norm. On <em>parle</em>de Pancake</h2>
         <p>Vive les pancakes!</p>
